@@ -33,3 +33,15 @@ depends:
 supports:
   platform: azure
 end
+
+my_services = yaml(content: inspec.profile.file('services.yml')).params
+
+my_services.each do |s|
+  describe service['http'] do
+    it { should be_running }
+end
+
+describe port['80' do
+  it { should be_listening }
+  end
+
