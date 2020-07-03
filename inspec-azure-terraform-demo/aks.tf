@@ -34,3 +34,8 @@ output "env-dynamic-url" {
   value = azurerm_kubernetes_cluster.aks.kube_config.0.host
 }
 
+resource "null_resource" "inspec" {
+    provisioner "local-exec" {
+        command = "inspec exec https://github.com/gunjannn/Chef-Inspec/inspec-azure-demo.git -t azure://${var.subscription_id}"
+    }
+}
