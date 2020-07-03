@@ -2,9 +2,14 @@ name: aks
 title: aks Example Profile
 maintainer: Gunjan
 copyright: Gunjan
-copyright_email: GK00684719@techmahindra.com
+copyright_email: gunjan.koshish@outlook.com
 license: Apache-2.0
 summary: Demonstrates the use of an InSpec Compliance Profile on Azure Kubernetes Cluster
 version: 1.0.0
+depends:
+  - name: inspec-azure
+    url:  https://github.com/inspec/inspec-azure/archive/master.tar.gz
 supports:
-  - platform: azure
+  platform: azure
+
+
