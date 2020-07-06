@@ -6,9 +6,10 @@ copyright_email: gunjan.koshish@outlook.com
 license: Apache-2.0
 summary: Demonstrates the use of an InSpec Compliance Profile on Azure Kubernetes Cluster
 version: 1.0.0
+inspec-version: 4.21.1
 depends:
-  - name: inspec-azure
-    url:  https://github.com/inspec/inspec-azure/archive/master.tar.gz
+  - name: Chef-Inspec
+    git:  https://github.com/gunjannn/Chef-Inspec
 supports:
   platform: azure
 
